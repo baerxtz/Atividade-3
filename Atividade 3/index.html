@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Integrantes:
+- NOME COMPLETO DO ALUNO 1
+- NOME COMPLETO DO ALUNO 2
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore | Tecnologia para você</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--dark:#101827;--blue:#2563eb;--light:#f3f6fb;--text:#263247}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.6}
+header{background:var(--dark);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font-size:1.6rem;font-weight:800;letter-spacing:1px;color:white;text-decoration:none}.logo span{color:#60a5fa}
+nav{display:flex;gap:22px}nav a{color:white;text-decoration:none;font-weight:600;transition:color .25s}nav a:hover{color:#60a5fa}
+.hero{position:relative;overflow:hidden;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:50px 20px;color:white;background:linear-gradient(120deg,#172554,#2563eb,#0891b2)}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border:35px solid #ffffff20;border-radius:50%;right:-70px;top:-90px}
+.hero-content{position:relative;z-index:1;max-width:700px;animation:entrar .8s ease-out}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;margin-bottom:15px}.hero p{font-size:1.1rem;margin-bottom:25px}
+.btn{display:inline-block;background:white;color:#1d4ed8;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:bold;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px);background:#dbeafe}
+main{width:min(1150px,90%);margin:45px auto}.section-title{text-align:center;margin-bottom:28px}.section-title h2{color:var(--dark);font-size:2rem}.section-title p{color:#64748b}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 18px #0f172a12;transition:transform .25s,box-shadow .25s;position:relative}
+.card:hover{transform:translateY(-8px);box-shadow:0 15px 28px #0f172a20}
+.tag{position:absolute;top:12px;left:12px;background:#2563eb;color:white;font-size:.75rem;padding:5px 10px;border-radius:20px;z-index:1}
+.card img{width:100%;height:210px;object-fit:cover;display:block}.card-info{padding:20px}.card h3{color:#111827;margin-bottom:8px}.card p{color:#64748b;font-size:.95rem;min-height:72px}
+.price-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:16px}.price{color:#1d4ed8;font-size:1.2rem;font-weight:bold}
+.buy{background:var(--dark);color:white;text-decoration:none;padding:8px 13px;border-radius:7px;font-size:.9rem}.buy:hover{background:var(--blue)}
+.benefits{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap;margin:50px 0;padding:25px;background:white;border-radius:12px;text-align:center}
+.benefits strong{display:block;color:#1d4ed8;font-size:1.05rem}
+footer{background:var(--dark);color:#cbd5e1;text-align:center;padding:25px;margin-top:50px}footer a{color:#93c5fd;text-decoration:none}
+@keyframes entrar{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,1fr)}header{justify-content:center}}
+@media(max-width:600px){header{padding:16px 5%;flex-direction:column}nav{gap:16px;flex-wrap:wrap;justify-content:center}main{width:92%;margin:30px auto}.products{grid-template-columns:1fr}.card img{height:230px}.hero{min-height:260px}.benefits{flex-direction:column}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="index.html">TECH<span>STORE</span></a><nav><a href="index.html">Início</a><a href="#produtos">Produtos</a><a href="sobre.html">Sobre</a></nav></header>
+<section class="hero"><div class="hero-content"><h1>O próximo nível da tecnologia começa aqui.</h1><p>Encontre produtos incríveis para estudar, trabalhar e jogar.</p><a class="btn" href="#produtos">Explorar produtos</a></div></section>
+<main><section id="produtos"><div class="section-title"><h2>Produtos em destaque</h2><p>Confira nossa seleção especial de tecnologia.</p></div>
+<div class="products">
+<article class="card"><span class="tag">Destaque</span><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80" alt="Smartphone moderno"><div class="card-info"><h3>Smartphone Pro</h3><p>Desempenho rápido, câmera de alta qualidade e muito espaço para seus aplicativos.</p><div class="price-row"><span class="price">R$ 2.499,90</span><a class="buy" href="#">Comprar</a></div></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80" alt="Notebook para trabalho"><div class="card-info"><h3>Notebook Ultra</h3><p>Leve, potente e ideal para estudar, trabalhar ou aproveitar seus jogos favoritos.</p><div class="price-row"><span class="price">R$ 3.899,90</span><a class="buy" href="#">Comprar</a></div></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Fone de ouvido"><div class="card-info"><h3>Headphone Sound</h3><p>Som imersivo e conforto para ouvir música, assistir vídeos e jogar.</p><div class="price-row"><span class="price">R$ 349,90</span><a class="buy" href="#">Comprar</a></div></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80" alt="Mouse gamer"><div class="card-info"><h3>Mouse Gamer RGB</h3><p>Precisão, resposta rápida e iluminação para completar seu setup.</p><div class="price-row"><span class="price">R$ 159,90</span><a class="buy" href="#">Comprar</a></div></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Relógio inteligente"><div class="card-info"><h3>Smartwatch Fit</h3><p>Acompanhe notificações e atividades diárias com praticidade.</p><div class="price-row"><span class="price">R$ 499,90</span><a class="buy" href="#">Comprar</a></div></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80" alt="Teclado mecânico"><div class="card-info"><h3>Teclado Mecânico</h3><p>Teclas confortáveis, construção resistente e visual moderno.</p><div class="price-row"><span class="price">R$ 289,90</span><a class="buy" href="#">Comprar</a></div></div></article>
+</div></section>
+<section class="benefits"><div>🚚 <strong>Entrega rápida</strong><span>Receba em casa</span></div><div>🔒 <strong>Compra segura</strong><span>Seus dados protegidos</span></div><div>💬 <strong>Atendimento</strong><span>Estamos aqui para ajudar</span></div></section></main>
+<footer><p>© 2026 TechStore — Projeto acadêmico de HTML e CSS.</p><p><a href="sobre.html">Conheça a loja</a></p></footer>
+</body></html>
